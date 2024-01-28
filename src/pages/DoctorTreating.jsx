@@ -8,7 +8,7 @@ export const DoctorTreating = () => {
     const [loading,setLoading]=useState(true);
     const handleSignup = async () => {
   const patientname = localStorage.getItem('patientname',"****");
-        const response = await axios.get(`http://localhost:3000/doctortreating?search=${patientname}`).then((response) => {
+        const response = await axios.get(`https://hospital-backend-2ox9.onrender.com/doctortreating?search=${patientname}`).then((response) => {
 
           let arr=response.data;
           setLoading(false);

@@ -13,7 +13,7 @@ export const Patient_Login = (props) => {
   const handleSignup = async () => {
    
     try {
-      const response = await axios.post('http://localhost:3000/patientlogin', {
+      const response = await axios.post('https://hospital-backend-2ox9.onrender.com/patientlogin', {
         username,
         password,
     hospitalname,

@@ -9,7 +9,7 @@ export const Owner = () => {
 
   const handleSignup = async () => {
 
-    const response = await axios.get(`http://localhost:3000/doctorlistowner?search=${ownername}`).then((response) => {
+    const response = await axios.get(`https://hospital-backend-2ox9.onrender.com/doctorlistowner?search=${ownername}`).then((response) => {
       console.log(response.data);
       let arr = response.data;
       setLoading(false);
@@ -23,7 +23,7 @@ export const Owner = () => {
     });
   };
   const removedoctor = async (doctorname) => {
-    const response = await axios.delete(`http://localhost:3000/removedoctor?doctor=${doctorname}&owner=${ownername}`).then((response) => {
+    const response = await axios.delete(`https://hospital-backend-2ox9.onrender.com/removedoctor?doctor=${doctorname}&owner=${ownername}`).then((response) => {
 
       if (response.data === "success") {
         setname(names.filter(user => user.username !== doctorname));

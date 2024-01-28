@@ -11,7 +11,7 @@ export const Assign_Report = () => {
     const assignreport = async (username) => {
   
      
-       const response = await axios.post(`http://localhost:3000/assignreport`,{
+       const response = await axios.post(`https://hospital-backend-2ox9.onrender.com/assignreport`,{
         username,
         disease,
         symptoms,

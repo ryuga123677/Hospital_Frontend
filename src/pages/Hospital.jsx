@@ -14,7 +14,7 @@ export const Hospital = () => {
 
   const handleSignup = async (username) => {
 
-    const response = await axios.get(`http://localhost:3000/hospitals`).then((response) => {
+    const response = await axios.get(`https://hospital-backend-2ox9.onrender.com/hospitals`).then((response) => {
       console.log(response.data);
       let arr = response.data;
       setLoading(false);

@@ -9,7 +9,7 @@ export const Doctor_appointment =() => {
     const [loading, setLoading] = useState(true);
      const seeAppoint = async () => {
     
-const response=await axios.get(`http://localhost:3000/patientappoints?param=${username}`).then((response) => {
+const response=await axios.get(`https://hospital-backend-2ox9.onrender.com/patientappoints?param=${username}`).then((response) => {
     let arr=response.data;
         
           setname(arr);
@@ -19,7 +19,7 @@ const response=await axios.get(`http://localhost:3000/patientappoints?param=${us
 });
    }
    const Accept=async (patientname) => {
-    const response=await axios.post('http://localhost:3000/appointmentfix',{
+    const response=await axios.post('https://hospital-backend-2ox9.onrender.com/appointmentfix',{
         username,
         patientname,
     }).then((response) => {
@@ -30,7 +30,7 @@ const response=await axios.get(`http://localhost:3000/patientappoints?param=${us
     })
    }
    const Decline=async (patientname) => {
-    const response=await axios.get(`http://localhost:3000/appointmentdecline?doctorname=${username}&patientname=${patientname}`
+    const response=await axios.get(`https://hospital-backend-2ox9.onrender.com/appointmentdecline?doctorname=${username}&patientname=${patientname}`
   ).then((response) => {
     if(response.data==="success")
     {

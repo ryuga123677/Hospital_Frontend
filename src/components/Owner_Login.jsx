@@ -11,7 +11,7 @@ export const Owner_Login = (props) => {
   const navigate = useNavigate();
   const handleSignup = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/ownerlogin', {
+      const response = await axios.post('https://hospital-backend-2ox9.onrender.com/ownerlogin', {
         username,
         password,
     

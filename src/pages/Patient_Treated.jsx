@@ -11,7 +11,7 @@ export const Patient_Treated = () => {
    
     const handlelist = async () => {
   
-        const response = await axios.get(`http://localhost:3000/patienttreated?search=${doctorname}`).then((response) => {
+        const response = await axios.get(`https://hospital-backend-2ox9.onrender.com/patienttreated?search=${doctorname}`).then((response) => {
           console.log(response.data);
           let arr=response.data;
           setLoading(false);

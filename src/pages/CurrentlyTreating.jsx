@@ -13,7 +13,7 @@ export const CurrentlyTreating = () => {
    
     const handleSignup = async (username) => {
   
-        const response = await axios.get(`http://localhost:3000/doctorspatient?search=${doctorname}`).then((response) => {
+        const response = await axios.get(`https://hospital-backend-2ox9.onrender.com/doctorspatient?search=${doctorname}`).then((response) => {
           console.log(response.data);
           let arr=response.data;
           setLoading(false);
@@ -36,7 +36,7 @@ export const CurrentlyTreating = () => {
         };
         const Treated = async (patientname) => {
   
-          const response = await axios.post('http://localhost:3000/treated',{
+          const response = await axios.post('https://hospital-backend-2ox9.onrender.com/treated',{
             doctorname,
             patientname,
           }).then((response) => {
@@ -55,7 +55,7 @@ export const CurrentlyTreating = () => {
         }
         const notTreated = async (patientname) => {
   
-          const response = await axios.post('http://localhost:3000/nottreated',{
+          const response = await axios.post('https://hospital-backend-2ox9.onrender.com/nottreated',{
             doctorname,
             patientname,
           }).then((response) => {

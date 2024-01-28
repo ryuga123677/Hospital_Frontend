@@ -8,7 +8,7 @@ export const Died = () => {
     const [loading, setLoading] = useState(true);
     const handlelist = async (username) => {
   
-        const response = await axios.get(`http://localhost:3000/died?search=${doctorname}`).then((response) => {
+        const response = await axios.get(`https://hospital-backend-2ox9.onrender.com/died?search=${doctorname}`).then((response) => {
           console.log(response.data);
           let arr=response.data;
           setLoading(false);

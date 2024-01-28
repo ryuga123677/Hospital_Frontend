@@ -8,7 +8,7 @@ export const SeeReports = () => {
     const [loading, setLoading] = useState(true);
     const patientname=localStorage.getItem('patientname',"****");
     const seereports=async()=>{
-        const response=axios.get(`http://localhost:3000/seereports?name=${patientname}`).then((response)=>{
+        const response=axios.get(`https://hospital-backend-2ox9.onrender.com/seereports?name=${patientname}`).then((response)=>{
       setnames(response.data);
       setLoading(false);
         }).catch((error)=>{
