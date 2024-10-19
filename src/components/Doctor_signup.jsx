@@ -21,7 +21,7 @@ export const Doctor_signup = (props) => {
     }
     try {
       const response = await axios.post(
-        "http://localhost:3000/doctorregister",
+        "https://hospital-backend-2ox9.onrender.com/doctorregister",
         {
           username,
           email,

@@ -14,7 +14,7 @@ export const Doctor_List = () => {
    
     const handleSignup = async (username) => {
   
-        const response = await axios.get(`http://localhost:3000/doctorlist?search=${hospitalname}`).then((response) => {
+        const response = await axios.get(`https://hospital-backend-2ox9.onrender.com?search=${hospitalname}`).then((response) => {
           console.log(response.data);
           let arr=response.data;
           setLoading(false);
@@ -29,7 +29,7 @@ export const Doctor_List = () => {
       }
       const assignappoint = async (username) => {
   
-        const response = await axios.get(`http://localhost:3000/appointment?param1=${username}&param2=${patientname}`).then((response) => {
+        const response = await axios.get(`https://hospital-backend-2ox9.onrender.com?param1=${username}&param2=${patientname}`).then((response) => {
           console.log(response.data);
           let arr=response.data;
         

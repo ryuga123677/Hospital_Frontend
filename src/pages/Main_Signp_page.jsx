@@ -12,7 +12,7 @@ export const Main_Signp_page = () => {
 
     const islogindoctor = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/isdoctorlogin");
+        const response = await axios.get("https://hospital-backend-2ox9.onrender.com/isdoctorlogin");
         console.log(response.data);
         if (response.data === "no refreshtoken") {
           
@@ -32,7 +32,7 @@ export const Main_Signp_page = () => {
     }
     const isloginowner = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/isownerlogin");
+        const response = await axios.get("https://hospital-backend-2ox9.onrender.com/isownerlogin");
         console.log(response.data);
         if (response.data === "no refreshtoken") {
           
@@ -53,7 +53,7 @@ export const Main_Signp_page = () => {
   
     const isloginpatient = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/ispatientlogin");
+        const response = await axios.get("https://hospital-backend-2ox9.onrender.com/ispatientlogin");
         console.log(response.data);
         if (response.data === "no refreshtoken") {
           

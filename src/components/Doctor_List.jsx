@@ -36,7 +36,7 @@ export const Doctor_List = () => {
   const assignappoint = async (username) => {
     const response = await axios
       .get(
-        `http://localhost:3000/appointment?param1=${username}&param2=${patientname}`
+        `https://hospital-backend-2ox9.onrender.com/appointment?param1=${username}&param2=${patientname}`
       )
       .then((response) => {
         console.log(response.data);
@@ -54,25 +54,7 @@ export const Doctor_List = () => {
       {loading ? (
         <SpinnerDotted className="loading" />
       ) : (
-        // <div className="cont">
-        //   <ol className="ml-20">
-        //     {names.map((item, index) => (
-        //       <li key={index}>
-        //         <div className="inrow">
-        //           <button
-        //             className="btn"
-                    // onClick={() => {
-                    //   assignappoint(item.username), navigate(-1);
-                    // }}
-        //           >
-        //             <h2>{item.username}</h2> click to request for appointment{" "}
-        //             <h6>Domain-{item.speciality}</h6>
-        //           </button>
-        //         </div>
-        //       </li>
-        //     ))}
-        //   </ol>
-        // </div>
+        
         <div className="flex justify-center">
           <List
             className="flex flex-col m-5 "

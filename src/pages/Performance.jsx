@@ -9,7 +9,7 @@ export const Performance = () => {
     const [loading, setLoading] = useState(true);
     const handlelist = async () => {
   
-        const response = await axios.get(`http://localhost:3000/performance?search=${doctorname}`).then((response) => {
+        const response = await axios.get(`https://hospital-backend-2ox9.onrender.com/performance?search=${doctorname}`).then((response) => {
         
           let length=response.data;
           setLoading(false);

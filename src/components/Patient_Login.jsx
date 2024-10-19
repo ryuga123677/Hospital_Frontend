@@ -20,7 +20,7 @@ export const Patient_Login = (props) => {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:3000/patientlogin", {
+      const response = await axios.post("https://hospital-backend-2ox9.onrender.com/patientlogin", {
         username,
         password,
         hospitalname,

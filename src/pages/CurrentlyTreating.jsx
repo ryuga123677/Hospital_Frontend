@@ -22,7 +22,7 @@ export const CurrentlyTreating = () => {
    
     const handleSignup = async (username) => {
   
-        const response = await axios.get(`http://localhost:3000/doctorspatient?search=${doctorname}`).then((response) => {
+        const response = await axios.get(`https://hospital-backend-2ox9.onrender.com?search=${doctorname}`).then((response) => {
           console.log(response.data);
           let arr=response.data;
           setLoading(false);
@@ -45,7 +45,7 @@ export const CurrentlyTreating = () => {
         };
         const Treated = async (patientname) => {
   
-          const response = await axios.post('http://localhost:3000/treated',{
+          const response = await axios.post('https://hospital-backend-2ox9.onrender.com/treated',{
             doctorname,
             patientname,
           }).then((response) => {
@@ -64,7 +64,7 @@ export const CurrentlyTreating = () => {
         }
         const notTreated = async (patientname) => {
   
-          const response = await axios.post('http://localhost:3000/nottreated',{
+          const response = await axios.post('https://hospital-backend-2ox9.onrender.com/nottreated',{
             doctorname,
             patientname,
           }).then((response) => {
@@ -90,23 +90,7 @@ export const CurrentlyTreating = () => {
   <>
     <h1 className='head2'>Currently Treating</h1>
     {loading?(<SpinnerDotted className='loading'/>):(
-      // <div className='box'>
-      //       <ol className='cont'>
-      //   {names.map((item,index) => (
-          
-      //     <li key={index } className='inrow'>
-          
-      //       <div>
-      //       <button className="btn4" onClick={()=>assignreport(item.username)}><h2>{item.username}</h2> Tap to assign report</button>
-      //       <button className='btn2' onClick={()=>Treated(item.username)}>Treated</button>
-      //       <button className='btn2' onClick={()=>notTreated(item.username)}>Not-Treated</button>
-      //       <button className='btn2' onClick={()=>navigate( `/chat/${item.username}`)}>Chat</button>
-      //       </div>
-           
-      //       </li>
-      //   ))}
-      // </ol>
-      // </div>
+      
       <div className="flex justify-center">
           <List
             className="flex flex-col m-5 "

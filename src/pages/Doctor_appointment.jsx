@@ -15,7 +15,7 @@ export const Doctor_appointment = () => {
   const [loading, setLoading] = useState(true);
   const seeAppoint = async () => {
     const response = await axios
-      .get(`http://localhost:3000/patientappoints?param=${username}`)
+      .get(`https://hospital-backend-2ox9.onrender.com/patientappoints?param=${username}`)
       .then((response) => {
         let arr = response.data;
         console.log(response.data);
@@ -29,7 +29,7 @@ export const Doctor_appointment = () => {
   };
   const Accept = async (patientname) => {
     const response = await axios
-      .post("http://localhost:3000/appointmentfix", {
+      .post("https://hospital-backend-2ox9.onrender.com/appointmentfix", {
         username,
         patientname,
       })
@@ -42,7 +42,7 @@ export const Doctor_appointment = () => {
   const Decline = async (patientname) => {
     const response = await axios
       .get(
-        `http://localhost:3000/appointmentdecline?doctorname=${username}&patientname=${patientname}`
+        `https://hospital-backend-2ox9.onrender.com/appointmentdecline?doctorname=${username}&patientname=${patientname}`
       )
       .then((response) => {
         if (response.data === "success") {
@@ -65,23 +65,7 @@ export const Doctor_appointment = () => {
       {loading ? (
         <SpinnerDotted className="loading" />
       ) : (
-        // <div className='cont'>
-
-        //   <ol>
-        //   {names.map((item, index) => (
-        //     <li key={index} >
-        //       <div className='inrow'>
-
-        //       <h2 className='txt'>{item.username}</h2>
-        //         <button className='btn' onClick={()=>Accept(item.username)}>Accept</button>
-        //         <button className='btn' onClick={()=>Decline(item.username)}>Decline</button>
-        //       </div>
-
-        //     </li>
-        //   ))}
-        // </ol>
-
-        // </div>
+    
         <div className="flex justify-center">
           <List
             className="flex flex-col m-5 "

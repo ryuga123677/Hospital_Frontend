@@ -11,7 +11,7 @@ export const Died = () => {
     const [loading, setLoading] = useState(true);
     const handlelist = async (username) => {
   
-        const response = await axios.get(`http://localhost:3000/died?search=${doctorname}`).then((response) => {
+        const response = await axios.get(`https://hospital-backend-2ox9.onrender.com/died?search=${doctorname}`).then((response) => {
           console.log(response.data);
           let arr=response.data;
           setLoading(false);
@@ -31,17 +31,7 @@ export const Died = () => {
     <>
     <h1 className='head2'>Patient Died</h1>
     {loading?(<SpinnerDotted className='loading'/>):(
-      // <div >
-      //   <div className='cont'>
-      //   <ol className='content'>
-      //   {names.map((item,index) => (
-          
-      //     <li key={index }>
-      //         <h2>{item.username}</h2> </li>
-      //   ))}
-      // </ol>
-      //   </div>
-      // </div>
+    
       <div className="flex justify-center">
       <List
         className="flex flex-col m-5 "

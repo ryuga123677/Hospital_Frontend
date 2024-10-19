@@ -2,7 +2,7 @@ import { io } from 'socket.io-client'
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { SpinnerDotted } from 'spinners-react';
-const socket = io("http://localhost:4000");
+const socket = io("https://hospital-backend-2ox9.onrender.com");
 
 
 const ChatView = () => {

@@ -20,7 +20,7 @@ export const Patient_signup = (props) => {
     }
     try {
       const response = await axios.post(
-        "http://localhost:3000/patientregister",
+        "https://hospital-backend-2ox9.onrender.com/patientregister",
         {
           username,
           email,

@@ -15,7 +15,7 @@ export const DoctorTreating = () => {
   const handleSignup = async () => {
     const patientname = localStorage.getItem("patientname", "****");
     const response = await axios
-      .get(`http://localhost:3000/doctortreating?search=${patientname}`)
+      .get(`https://hospital-backend-2ox9.onrender.com/doctortreating?search=${patientname}`)
       .then((response) => {
         let arr = response.data;
         setLoading(false);
@@ -37,23 +37,7 @@ export const DoctorTreating = () => {
         {loading ? (
           <SpinnerDotted className="loading" />
         ) : (
-          // <ol className="cont">
-          //   {names.map((item, index) => (
-          //     <li key={index} className="inrow">
-          //       <div className="inrow mx-10">
-          //         <h2>
-          //           {index + 1}- {item.username}-({item.speciality})
-          //         </h2>
-          //         <button
-          //           className="btn2"
-          //           onClick={() => navigate(`/chat/${item.username}`)}
-          //         >
-          //           Chat with doctor
-          //         </button>
-          //       </div>
-          //     </li>
-          //   ))}
-          // </ol>
+          
            <div className="flex justify-center">
            <List
              className="flex flex-col m-5 "

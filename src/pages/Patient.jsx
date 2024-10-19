@@ -15,7 +15,7 @@ export const Patient = () => {
   });
   const islogin = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/ispatientlogin");
+      const response = await axios.get("https://hospital-backend-2ox9.onrender.com/ispatientlogin");
       console.log(response.data);
       if (response.data === "no refreshtoken") {
         
