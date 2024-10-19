@@ -26,8 +26,9 @@ import { Contact } from './pages/Contact'
 import ChatView from './pages/ChatView'
 import { DoctorTreating } from './pages/DoctorTreating'
 import { Hospital } from './pages/Hospital'
-// import { RequireAuth } from './components/RequireAuth'
-// import {AuthProvider} from './components/AuthProvider'
+ import { RequireAuth } from './components/RequireAuth'
+import {AuthProvider} from './components/Auth'
+
 function App() {
 
 

@@ -9,7 +9,7 @@ export const Login = () => {
   const navigate = useNavigate();
   const handleLogin = async () => {
    
-     await axios.post('https://hospital-backend-2ox9.onrender.com/login', {email,password,
+     await axios.post('http://localhost:3000/login', {email,password,
       }).then(result=>{
         console.log(result.data);
         if(result.data ==="success")

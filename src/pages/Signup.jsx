@@ -10,7 +10,7 @@ export const Signup = (props) => {
   const navigate = useNavigate();
   const handleSignup = async () => {
     try {
-      const response = await axios.post('https://hospital-backend-2ox9.onrender.com/register', {
+      const response = await axios.post('http://localhost:3000/register', {
         username,
         email,
       
